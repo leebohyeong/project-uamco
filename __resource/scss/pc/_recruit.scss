@@ -1,0 +1,278 @@
+@use "sass:math";
+
+.recruit-talent {
+
+    &__about {
+        margin-bottom: 120px;
+
+        &-inner {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 120px 0 80px 0;
+            text-align: center;
+
+            h3 {
+                padding-bottom: 25px;
+                color: #000;
+                font-size: 32px;
+                font-weight: $font-weight-extrabold;
+            }
+
+            p {
+                color: #000;
+                font-size: 14px;
+                font-weight: $font-weight-regular;
+                line-height: math.div(24, 14);
+            }
+        }
+
+        dl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+
+            div {
+                width: 384px;
+                height: 384px;
+                padding: 60px;
+                border-radius: 40px 384px 384px 384px;
+                box-sizing: border-box;
+
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        background: url(/assets/images/recruit/icon_talent_about_#{$i}.png) no-repeat 174px 214px / 110px auto;
+                    }
+                }
+
+                &:not(:first-child) {
+                    margin-left: -90px;
+                }
+
+                &:nth-of-type(1) {
+                    background-color: #23A6F8;
+                }
+
+                &:nth-of-type(2) {
+                    background-color: #AAD530;
+                }
+
+                &:nth-of-type(3) {
+                    background-color: #FF901A;
+                }
+            }
+
+            dt {
+                padding-bottom: 28px;
+                font-size: 28px;
+                font-weight: $font-weight-extrabold;
+            }
+
+            dd {
+                font-size: 20px;
+                line-height: math.div(28, 20);
+            }
+        }
+
+    }
+
+    &__capabilities {
+        margin-bottom: 200px;
+
+        &-inner {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            padding-bottom: 80px;
+            color: #000;
+            font-size: 32px;
+            font-weight: $font-weight-extrabold;
+            text-align: center;
+        }
+
+        &-contents {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 80px;
+        }
+
+        &-item {
+            h4 {
+                position: relative;
+                width: 320px;
+                height: 80px;
+                margin: 0 auto;
+                background-color: #1E1D24;
+                border-radius: 10px 80px 80px 80px;
+                color: #fff;
+                font-size: 24px;
+                font-weight: $font-weight-extrabold;
+                line-height: 80px;
+                text-align: center;
+            }
+
+            dl {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 22px;
+
+                position: relative;
+                padding-top: 30px;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 1px;
+                    height: 30px;
+                    border: 1px dashed #a4a4a4;
+                    content:'';
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 290px;
+                    height: 1px;
+                    border: 1px dashed #a4a4a4;
+                    content:'';
+                }
+
+                div {
+                    position: relative;
+                    margin-top: 30px;
+                    padding: 105px 0 40px 0;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    &::before {
+                        position: absolute;
+                        top: -30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 1px;
+                        height: 30px;
+                        border: 1px dashed #a4a4a4;
+                        content:'';
+                    }
+                }
+
+                dt {
+                    margin-bottom: 30px;
+                    color: #000;
+                    font-size: 20px;
+                    font-weight: $font-weight-extrabold;
+
+                    span {
+                        display: block;
+                        padding-top: 8px;
+                        color: rgba(#1E1D24, .8);
+                        font-size: 15px;
+                        font-weight: $font-weight-regular;
+                    }
+                }
+                
+                dd {
+                    width: 160px;
+                    height: 60px;
+                    margin: 0 auto;
+                    background-color: #fff;
+                    border-radius: 4px 40px 40px 40px;
+                    box-shadow: rgba(#000, .14) 0px 4px 12px;
+                    color: #000;
+                    line-height: 60px;
+
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+.recruit-welfare {
+    &__contents {
+        margin-bottom: 200px;
+    }
+
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    h3 {
+        padding: 120px 0 30px 0;
+        color: #1E1D24;
+        font-size: 32px;
+        font-weight: $font-weight-extrabold;
+        text-align: center;
+    }
+
+    dl {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+
+        div {
+            padding: 310px 30px 50px 30px;
+            border-radius: 20px;
+
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    background: #F6F6F6 url(/assets/images/recruit/icon_welfare_#{$i}.png) no-repeat center 0;
+                }
+            }
+        }
+
+        dt {
+            padding-bottom: 20px;
+            color: #1E1D24;
+            font-size: 24px;
+            font-weight: $font-weight-extrabold;
+        }
+
+        dd {
+            color: #1E1D24;
+            line-height: math.div(28, 16);
+        }
+    }
+
+}
+
+.recruit-list {
+    &__inner {
+        width: 1200px;
+        margin: 0 auto 200px;
+    }
+
+    h3 {
+        padding: 120px 0 30px 0;
+        color: #1E1D24;
+        font-size: 32px;
+        font-weight: $font-weight-extrabold;
+        text-align: center;
+    }
+
+    .table td.recruit-list__table-title {
+        text-align: left;
+    }
+
+    &__table-link {
+        display: block;
+        color: #000;
+        font-size: 18px;
+        font-weight: $font-weight-extrabold;
+    }
+
+}

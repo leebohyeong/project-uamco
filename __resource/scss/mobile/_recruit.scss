@@ -1,0 +1,270 @@
+@use "sass:math";
+
+.recruit-talent {
+    padding-bottom: 150px;
+
+    h3 {
+        margin-top: 60px;
+        font-weight: $font-weight-extrabold;
+        font-size: 24px;
+        line-height: math.div(26, 24);
+        text-align: center;
+    }
+
+    h3 + p {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 14px;
+        font-weight: $font-weight-regular;
+        line-height: math.div(22, 14);
+        text-align: center;
+    }
+
+    &__about {
+        margin-bottom: 80px;
+
+        &-inner {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        dl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+
+            div {
+                width: 100%;
+                height: 178px;
+                padding: 20px 0 0 15px;
+                border-radius: 40px 384px 384px 384px;
+                box-sizing: border-box;
+
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        background: {
+                            image: url(/assets/images/recruit/icon_talent_about_#{$i}.png);
+                            repeat: no-repeat;
+                            position: center bottom 20px;
+                            size: 50px auto;
+                        };
+                    }
+                }
+
+                &:not(:first-child) {
+                    margin-left: -13px;
+                }
+
+                &:nth-of-type(1) {
+                    background-color: #23A6F8;
+                }
+
+                &:nth-of-type(2) {
+                    background-color: #AAD530;
+                }
+
+                &:nth-of-type(3) {
+                    background-color: #FF901A;
+                }
+            }
+
+            dt {
+                margin-bottom: 7px;
+                font-weight: $font-weight-extrabold;
+                font-size: 14px;
+                line-height: math.div(20, 14);
+            }
+
+            dd {
+                font-size: 12px;
+                line-height: math.div(16, 12);
+            }
+        }
+
+    }
+
+    &__capabilities {
+
+        &-inner {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        &-contents {
+
+        }
+
+        &-item {
+            margin-top: 40px;
+
+            h4 {
+                position: relative;
+                width: 220px;
+                height: 60px;
+                margin: 0 auto;
+                background-color: #1E1D24;
+                border-radius: 10px 80px 80px 80px;
+                box-shadow: rgba(#000, .16) 10px 10px 20px;
+                color: #fff;
+                font-size: 20px;
+                font-weight: $font-weight-extrabold;
+                line-height: 60px;
+                text-align: center;
+            }
+
+            dl {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+                position: relative;
+                padding-top: 18px;
+                margin: 0 auto;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 1px;
+                    height: 18px;
+                    border: 1px dashed #a4a4a4;
+                    content:'';
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 18px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: calc(((100% - 20px)/2) + 20px);
+                    height: 1px;
+                    border: 1px dashed #a4a4a4;
+                    content:'';
+                }
+
+                div {
+                    position: relative;
+                    margin-top: 18px;
+                    padding: 78px 0 30px 0;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    &::before {
+                        position: absolute;
+                        top: -18px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 1px;
+                        height: 18px;
+                        border: 1px dashed #a4a4a4;
+                        content:'';
+                    }
+                }
+
+                dt {
+                    margin-bottom: 30px;
+                    font-weight: $font-weight-bold;
+                    font-size: 18px;
+                    line-height: math.div(26, 18);
+
+                    span {
+                        display: block;
+                        margin-top: 4px;
+                        color: rgba(#1E1D24, .8);
+                        font-weight: $font-weight-bold;
+                        font-size: 12px;
+                        line-height: math.div(16, 12);
+                    }
+                }
+                
+                dd {
+                    width: 98px;
+                    height: 40px;
+                    margin: 0 auto;
+                    background-color: #fff;
+                    border-radius: 4px 40px 40px 40px;
+                    box-shadow: rgba(#000, .16) 0px 6px 12px;
+                    color: #000;
+                    font-size: 14px;
+                    font-weight: $font-weight-bold;
+                    line-height: 40px;
+
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.recruit-welfare {
+    padding-bottom: 150px;
+
+    &__inner {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    h3 {
+        margin: 60px 0 40px;
+        font-weight: $font-weight-extrabold;
+        font-size: 24px;
+        line-height: math.div(26, 24);
+        text-align: center;
+    }
+
+    dl {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        margin: 0 auto;
+        color: #1E1D24;
+
+        div {
+            height: 307px;
+            padding: 150px 14px 0 14px;
+            border-radius: 20px;
+
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    background: #F6F6F6 url(/assets/images/recruit/icon_welfare_#{$i}.png) no-repeat center 10px / 158px auto;
+                }
+            }
+        }
+
+        dt {
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: $font-weight-extrabold;
+            line-height: math.div(20, 14);
+        }
+
+        dd {
+            font-size: 12px;
+            font-weight: $font-weight-bold;
+            line-height: math.div(20, 12);
+        }
+    }
+}
+
+.recruit-list {
+    .news-list-common > header {
+        padding: 60px 0 40px;
+
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .list-table {
+        margin: 0;
+    }
+
+    .list-table__title {
+        @include line-clamp(14px, 1);
+    }
+
+}

@@ -1,0 +1,1517 @@
+@use "sass:math";
+
+.business {
+
+    &__header {
+        padding: 100px 0 40px 0;
+        text-align: center;
+
+        h3 {
+            padding-bottom: 20px;
+            color: #000;
+            font-size: 40px;
+            font-weight: $font-weight-extrabold;
+        }
+
+        p {
+            color: #999;
+            font-size: 20px;
+        }
+    }
+
+    .tab {
+        &__menu {
+            padding: 18px 40px;
+            border: 1px solid #ddd;
+            border-radius: 18px 40px 40px 40px;
+            box-sizing: border-box;
+            color: #000;
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+            text-align: center;
+            transition: .2s;
+            cursor: pointer;
+
+            &--active {
+                color: #fff;
+                background-color: #1E1D24;
+                border-color: transparent;
+            }
+        }
+    }
+
+    &__tab-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 10px;
+        margin-bottom: 100px;
+    }
+
+    &__tab-content {
+        margin-bottom: 200px;
+    }
+
+}
+
+.business-cr {
+
+    #tab1 {
+        .business-cr__tab-content-inner {
+            position: relative;
+            width: 1180px;
+            height: 773px;
+            margin: 0 auto;
+
+            & > div {
+                position: absolute;
+                top: 340px;
+                left: 467px;
+                width: 348px;
+                height: 284px;
+                padding: 20px;
+                background-color: #AAD530;
+                border-radius: 80px 80px 80px 10px;
+                box-sizing: border-box;
+                box-shadow: rgba(#000, .16) 0 10px 20px;
+
+                h4 {
+                    padding: 10px 0 20px 0;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: $font-weight-extrabold;
+                    text-align: center;
+                }
+
+                ol {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 92px;
+                    grid-gap: 8px;
+                }
+
+                li {
+                    height: 92px;
+                    background-color: rgba(#fff, .2);
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: $font-weight-extrabold;
+                    line-height: math.div(18, 14);
+                    text-align: center;
+
+                    &:nth-of-type(1),
+                    &:nth-of-type(2) {
+                        padding-top: 42px;
+                        background:rgba(#fff, .2) url(/assets/images/business/icon_cr_list.png) no-repeat center 12px / 24px auto;
+                    }
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    &:nth-of-type(1) {
+                        border-radius: 36px 10px 10px 10px;
+                    }
+
+                    &:nth-of-type(2) {
+                        border-radius: 10px 36px 10px 10px;
+                    }
+
+                    &:nth-of-type(3) {
+                        border-radius: 10px;
+                    }
+
+                    &:nth-of-type(4) {
+                        border-radius: 10px 10px 60px 10px;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    text-align: center;
+
+                    &:nth-of-type(1) {
+                        display: grid;
+                        grid-template-columns: 145px 185px;
+                        grid-template-rows: 60px;
+                        align-items: center;
+                        top: -80px;
+                        left: 62.5px;
+                        background: url(/assets/images/business/icon_cr_arrow_1.png) no-repeat 102px center / 35px auto;
+                        text-align: left;
+                    }
+
+                    &:nth-of-type(2) {
+                        bottom: 96px;
+                        left: -84px;
+                        background: url(/assets/images/business/icon_cr_arrow_2.png) no-repeat center center / 60px auto;
+
+                        span:first-child {
+                            padding-bottom: 51px;
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        bottom: 96px;
+                        right: -130px;
+                        background: url(/assets/images/business/icon_cr_arrow_3.png) no-repeat center 68px / 96px auto;
+
+                        span:first-child {
+                            padding-bottom: 51px;
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        color: #666666;
+                        font-size: 14px;
+                        font-weight: $font-weight-bold;
+                        line-height: math.div(20, 14);
+
+                    }
+                }
+            }
+
+            div + dl {
+
+                > div {
+                    width: 348px;
+                    background-color: #fff;
+                    box-shadow: rgba(#000, .16) 0 10px 20px;
+                    text-align: center;
+                }
+
+                > div:nth-of-type(1) {
+                    position: absolute;
+                    top: 185px;
+                    left: -21px;
+                    width: 388px;
+                    padding: 20px;
+                    background-color: #F1F1F1;
+                    border-radius: 20px 80px 80px 80px;
+                    box-shadow: none;
+
+                    > div {
+                        background-color: #fff;
+                        border-radius: 10px 60px 60px 60px;
+                        box-shadow: rgba(#000, .16) 0 10px 20px;
+                    }
+
+                    > div:nth-of-type(1) {
+                        margin-bottom: 20px;
+                        padding: 20px;
+
+                        dd:nth-of-type(2) {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 308px;
+                            height: 82px;
+                            margin-top: 20px;
+                            background-color: rgba(#24A6F8, 0.1);
+                            border-radius: 10px 41px 41px 41px;
+
+                            img {
+                                width: 148px;
+                            }
+                        }
+                    }
+
+                    > div:nth-of-type(2) {
+                        padding: 27px 20px 60px 20px;
+                        background: #fff url(/assets/images/business/icon_cr_point.png) no-repeat center 94% / 4px auto;
+                        dt {
+                            color: #FF911A;
+                        }
+
+                        ol {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-gap: 8px;
+                            padding-top: 20px;
+                        }
+
+                        li {
+                            height: 56px;
+                            border-radius: 10px;
+                            background-color: rgba(#FF911A, .1);
+                            color: #FF911A;
+                            font-size: 14px;
+                            font-weight: $font-weight-extrabold;
+                            line-height: 56px;
+                        }
+                    }
+                }
+
+                > div:nth-of-type(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 467px;
+                    padding: 20px;
+                    border-radius: 10px 60px 60px 60px;
+
+                    dd:nth-of-type(2) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 308px;
+                        height: 82px;
+                        margin-top: 20px;
+                        background-color: rgba(#24A6F8, 0.1);
+                        border-radius: 10px 41px 41px 41px;
+
+                        img {
+                            width: 148px;
+                        }
+                    }
+                }
+
+                > div:nth-of-type(3) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 331px;
+                    right: 0;
+                    width: 228px;
+                    padding: 112px 0 36px 0;
+                    background: url(/assets/images/business/icon_cr_building.png) no-repeat center 30px / 72px auto;
+                    border-radius: 80px 10px 80px 80px;
+                }
+
+                dt {
+                    padding-bottom: 6px;
+                    color: #24A6F8;
+                    font-size: 16px;
+                    font-weight: $font-weight-bold;
+                    line-height: math.div(28, 20);
+
+                    strong {
+                        display: block;
+                        font-size: 24px;
+                        font-weight: $font-weight-extrabold;
+                    }
+                }
+
+                div:nth-of-type(3) dt {
+                    font-size: 20px;
+                    font-weight: $font-weight-extrabold;
+                    color: #5E5B6E;
+                }
+
+                dd {
+                    color: #999;
+                }
+
+                ol {
+
+                }
+
+                li {
+
+                }
+            }
+        }
+    }
+
+    #tab2 {
+        .business-cr__tab-content-inner {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            &:not(:first-child) {
+                padding-top: 200px;
+                background: url(/assets/images/business/icon_cr_process_arrow.png) no-repeat center 60px / 136px auto;
+            }
+
+            h4 {
+                color: #000;
+                font-size: 32px;
+                font-weight: $font-weight-extrabold;
+                text-align: center;
+
+                &::before {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 12px;
+                    background-color: #1E1D24;
+                    border-radius: 6px 20px 20px 20px;
+                    color: #fff;
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+            }
+
+            &:nth-of-type(1) {
+                h4 {
+                    margin-bottom: 57px;
+
+                    &::before {
+                        content:'1';
+                    }
+                }
+
+                table {
+                    width: 1200px;
+                    margin: 0 auto;
+                    border-bottom: 2px solid #1E1D24;
+
+                    thead {
+                        th {
+                            padding: 0 0 16px 40px;
+                            border-bottom: 2px solid #1E1D24;
+                            color: #000;
+                            font-size: 20px;
+                            font-weight: $font-weight-extrabold;
+                            text-align: left;
+                        }
+                    }
+                    
+                    tbody {
+                        td {
+                            border-bottom: 1px solid #ddd;
+                        }
+
+                        tr:last-child td {
+                            border-bottom: 0;
+                        }
+
+                        td:first-child {
+                            padding: 80px 40px;
+                            background-color: #F6F6F6;
+                            color: #000;
+                            font-size: 20px;
+                            font-weight: $font-weight-extrabold;
+                        }
+
+                        td:not(:first-child) {
+                            padding: 38px 40px;
+                            border-left: 1px solid #ddd;
+                        }
+
+                        li {
+                            position: relative;
+                            padding-left: 14px;
+                            line-height: math.div(30, 16);
+
+                            &::before {
+                                position: absolute;
+                                top: 12px;
+                                left: 0;
+                                width: 4px;
+                                height: 4px;
+                                background-color: #000;
+                                border-radius: 10px;
+                                content:'';
+                            }
+
+                            strong {
+                                font-weight: $font-weight-extrabold;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                h4 {
+                    margin-bottom: 57px;
+
+                    &::before {
+                        content:'2';
+                    }
+                }
+
+                h4 + div {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 24px;
+
+                    div {
+                        position: relative;
+                        width: 588px;
+                        height: 380px;
+                        
+                        @for $i from 1 through 2 {
+                            &:nth-child(#{$i}) {
+                                background: url(/assets/images/business/img_cr_process_img_#{$i}.jpg) no-repeat center;
+                            }
+                        }
+                    }
+                }
+
+                dl {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    padding: 40px 0 0 40px;
+                    background-color: #fff;
+                }
+
+                dt {
+                    padding-bottom: 20px;
+                    color: #000;
+                    font-size: 24px;
+                    font-weight: $font-weight-extrabold;
+                }
+
+                dd {
+                    line-height: math.div(28, 16);
+                }
+            }
+
+            &:nth-of-type(3) {
+                h4 {
+                    margin-bottom: 38px;
+
+                    &::before {
+                        content: '3';
+                    }
+                }
+
+                h4 + div {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 24px;
+
+                    div {
+                        padding: 40px 0 60px 50px;
+                        border-radius: 20px 160px 160px 160px;
+
+                        &:nth-of-type(1) {
+                            background-color: #24A6F8;
+                        }
+                        &:nth-of-type(2) {
+                            background-color: #AAD530;
+                        }
+                        &:nth-of-type(3) {
+                            background-color: #FF911A;
+                        }
+                    }
+
+                    span {
+                        padding-bottom: 10px;
+                        color: rgba(#fff, .5);
+                        font-size: 20px;
+                        font-weight: $font-weight-extrabold;
+                    }
+
+                    p {
+                        color: #fff;
+                        line-height: math.div(28, 16);
+
+                        strong {
+                            display: block;
+                            padding-bottom: 24px;
+                            font-size: 22px;
+                            font-weight: $font-weight-extrabold;
+                            line-height: math.div(32, 22);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .business-cr__tab-content-inner + section {
+            header {
+                position: relative;
+                height: 320px;
+                background: url(/assets/images/business/img_cr_process.jpg) no-repeat center/cover;
+            }
+
+            header > div {
+                display: flex;
+                align-items: flex-start;
+                grid-gap: 54px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 1110px;
+                padding: 58px 0 0 58px;
+                background-color: #fff;
+
+                h4 {
+                    &::before {
+                        content: '4';
+                    }
+                }
+
+                p {
+                    color: #000;
+                    line-height: math.div(28, 16);
+                }
+            }
+        }
+
+    }
+
+    #tab3 {
+        .business-cr__tab-content-inner {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            &:not(:first-child) {
+                margin-top: 120px;
+                
+                header {
+                    p {
+                        background-color: #AAD530;
+                    }
+                }
+            }
+
+            header {
+                margin-bottom: 60px;
+                text-align: center;
+
+                p {
+                    width: 82px;
+                    height: 38px;
+                    margin: 0 auto 24px;
+                    background-color: #24A6F8;
+                    border-radius: 10px 20px 20px 20px;
+                    color: #fff;
+                    font-weight: $font-weight-bold;
+                    line-height: 38px;
+                    text-align: center;
+                }
+
+                h4 {
+                    font-size: 32px;
+                    font-weight: $font-weight-extrabold;
+                }
+            }
+
+            header + div {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                
+                div {
+                    &.graph {
+                        dt {
+                            margin-bottom: 40px;
+                        }
+                    }
+
+                    &.graph1 {
+                        dt {
+                            padding-bottom: 316px;
+                            background: url(/assets/images/business/img_cr_graph_1.png) no-repeat left bottom / 334px auto;
+                        }
+                    }
+
+                    &.graph2 {
+                        dt {
+                            padding-bottom: 346px;
+                            background: url(/assets/images/business/img_cr_graph_2.png) no-repeat left bottom / 334px auto;
+                        }
+                    }
+
+                    &:not(:first-child) p {
+                        margin-left: -22px;
+                        color: #fff;
+                    }
+                    
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        height: 64px;
+                        margin-bottom: 44px;
+                        color: #000;
+                        font-size: 18px;
+                        font-weight: $font-weight-extrabold;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    dl {
+                        div {
+                            &:not(:first-child) {
+                                margin-top: 50px;
+                            }
+                        }
+
+                        dt,
+                        dd {
+                            padding-left: 10px;
+                            color: #000;
+                        }
+
+                        dt {
+                            padding-bottom: 12px;
+                            font-size: 18px;
+                            font-weight: $font-weight-extrabold;
+                        }
+
+                        dd {
+                            position: relative;
+                            font-size: 15px;
+                            font-weight: $font-weight-bold;
+                            line-height: math.div(24, 15);
+
+                            &::before {
+                                position: absolute;
+                                top: 8px;
+                                left: 0;
+                                width: 4px;
+                                height: 4px;
+                                background-color: #000;
+                                border-radius: 10px;
+                                content:'';
+                            }
+
+                            &.padding {
+                                padding-bottom: 25px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+.business-npl {
+
+    &__tab-content-inner {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    #tab-panel-contents-1 {
+        .business-npl__tab-content-inner {
+            > div {
+                &:nth-of-type(1) {
+                    position: relative;
+                    width: 1120px;
+                    margin: 0 auto;
+
+                    h4 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: rgba(#000, .16) 0 10px 20px;
+                        font-weight: $font-weight-extrabold;
+                        font-size: 24px;
+                        text-align: center;
+                        line-height: math.div(32, 24);
+                    }
+
+                    dl {
+                        display: flex;
+                        align-items: flex-start;
+                    }
+
+                    dt {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 136px;
+                        height: 110px;
+                        background: url(/assets/images/business/icon_npl_process_arrow.png) no-repeat center center/ 136px auto;
+                        font-weight: $font-weight-extrabold;
+                        font-size: 16px;
+                        line-height: math.div(24, 16);
+
+                        span {
+                            @include visually-hidden;
+                        }
+                    }
+
+                    dt + div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-left: 4px;
+                    }
+
+                    dd {
+                        position: relative;
+                        padding-left: 10px;
+                        color: #666666;
+                        font-size: 14px;
+                        line-height: math.div(20, 14);
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            top: calc(50% - 2px);
+                            left: 0;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #959595;
+                            content: "";
+                        }
+                    }
+
+                    p {
+                        position: absolute;
+                        background-repeat: no-repeat;
+                        font-weight: $font-weight-extrabold;
+                        font-size: 14px;
+                        line-height: math.div(20, 14);
+                        text-align: center;
+
+                        span {
+                            @include visually-hidden;
+                        }
+                    }
+
+                    > div {
+                        &:nth-of-type(1),
+                        &:nth-of-type(2),
+                        &:nth-of-type(5) {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        &:nth-of-type(3),
+                        &:nth-of-type(4) {
+                            position: absolute;
+                            top: 200px;
+
+                            h4 {
+                                width: 220px;
+                                height: 120px;
+                                border-radius: 20px 120px 120px 120px;
+                                color: #fff;
+                            }
+                        }
+
+                        &:nth-of-type(1) {
+                            margin-bottom: 10px;
+
+                            h4 {
+                                z-index: 10;
+                                width: 200px;
+                                height: 80px;
+                                border-radius: 20px 80px 80px 80px;
+                                background-color: #fff;
+                            }
+
+                            dl {
+                                padding-left: 94px;
+                            }
+
+                            dt + div {
+                                width: 90px;
+                                margin-top: 20px;
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            margin-bottom: 10px;
+
+                            h4 {
+                                z-index: 10;
+                                width: 340px;
+                                height: 120px;
+                                border-radius: 20px 120px 120px 120px;
+                                background-color: #AAD530;
+                                color: #FFFFFF;
+                            }
+
+                            dl {
+                                padding-left: 164px;
+                            }
+
+                            dt + div {
+                                width: 160px;
+                                margin-top: 10px;
+                            }
+
+                            dd {
+                                &:nth-of-type(2n-1) {
+                                    margin-right: 20px;
+                                }
+                            }
+
+                            p {
+                                width: 170px;
+                                background-size: auto 15px;
+
+                                &:nth-of-type(1) {
+                                    top: 230px;
+                                    left: 220px;
+                                    padding-bottom: 10px;
+                                    background: {
+                                        image: url(/assets/images/business/icon_npl_arrow_left.png);
+                                        position: center bottom;
+                                    }
+                                    color: #FF901A;
+                                }
+
+                                &:nth-of-type(2) {
+                                    top: 268px;
+                                    right: 220px;
+                                    padding-top: 10px;
+                                    background: {
+                                        image: url(/assets/images/business/icon_npl_arrow_right.png);
+                                        position: center top;
+                                    }
+                                    color: #AAD530;
+                                }
+
+                                &:nth-of-type(3) {
+                                    top: 230px;
+                                    right: 220px;
+                                    padding-bottom: 10px;
+                                    background: {
+                                        image: url(/assets/images/business/icon_npl_arrow_left.png);
+                                        position: center bottom;
+                                    }
+                                    color: #23A6F8;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(3) {
+                            left: 0;
+
+                            h4 {
+                                background-color: #FF901A;
+                            }
+                        }
+
+                        &:nth-of-type(4) {
+                            right: 0;
+
+                            h4 {
+                                background-color: #23A6F8;
+                            }
+                        }
+
+                        &:nth-of-type(5) {
+
+                            h4 {
+                                width: 200px;
+                                height: 80px;
+                                border-radius: 20px 80px 80px 80px;
+                                background-color: #fff;
+                            }
+
+                            p {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                bottom: 45px;
+                                left: 197px;
+                                width: auto;
+                                padding: 49px 90px 85px 108px;
+                                background: {
+                                    image: url(/assets/images/business/icon_npl_arrow_long.png);
+                                    position: center center;
+                                    size: 250px 154px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-top: 100px;
+
+                    dl {
+                        width: 588px;
+                        padding: 30px 0 30px 30px;
+                        border: 1px solid #5E6368;
+                        border-radius: 10px 50px 50px 50px;
+                    }
+
+                    dt {
+                        margin-bottom: 20px;
+                        font-weight: $font-weight-extrabold;
+                        font-size: 20px;
+                        line-height: math.div(30, 20);
+                    }
+
+                    dd {
+                        position: relative;
+                        padding-left: 10px;
+                        color: #666666;
+                        font-size: 14px;
+                        line-height: math.div(20, 14);
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            top: 8px;
+                            left: 0;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #959595;
+                            content: "";
+                        }
+
+                        & + dd {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #tab-panel-contents-2 {
+        .business-npl__tab-content-inner {
+            > div {
+                display: flex;
+                flex-direction: column;
+                height: 945px;
+                margin-top: -70px;
+                padding: 0 115px 0 770px;
+                background: url(/assets/images/business/bg_npl_diagram.png) no-repeat left top/ 770px auto;
+            }
+
+            dl {
+                padding-bottom: 80px;
+
+                &:nth-of-type(1) {
+                    margin-top: 150px;
+
+                    dt {
+                        border-top-color: #1E1D23;
+                        color: #1E1D23;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    dt {
+                        border-top-color: #7B7F84;
+                        color: #7B7F84;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    dt {
+                        border-top-color: #FF901A;
+                        color: #FF901A;
+                    }
+                }
+
+            }
+
+            dt {
+                padding: 20px 0;
+                border-top: 2px solid;
+                font-weight: $font-weight-extrabold;
+                font-size: 20px;
+                line-height: math.div(22, 20);
+            }
+
+            dd {
+                position: relative;
+                padding-left: 10px;
+                color: #666666;
+                font-size: 14px;
+                line-height: math.div(20, 14);
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    top: calc(50% - 2px);
+                    left: 0;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: #959595;
+                    content: "";
+                }
+
+                & + dd {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    #tab-panel-contents-3 {
+        .business-npl__tab-content-inner {
+            > div {
+                &:nth-of-type(1) {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    width: 800px;
+                    height: 520px;
+                    margin: 0 auto;
+                    background: url(/assets/images/business/img_npl_uamco_logo.png) no-repeat center center/ auto 100%;
+
+                    dl {
+                        width: 240px;
+                        margin-top: 30px;
+                        &:nth-of-type(1) {
+                            dt {
+                                border-radius: 80px 80px 10px 80px;
+
+                                &::before {
+                                    background-image: url(/assets/images/business/icon_npl_role_1.png)
+                                }
+                            }
+
+                            dd {
+                                border-radius: 80px 80px 10px 80px;
+                                &:nth-of-type(1) {
+                                    background-color: #24A6F8;
+                                }
+
+                                &:nth-of-type(2) {
+                                    background-color: #AAD530;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            dt {
+                                border-radius: 80px 80px 80px 10px;
+
+                                &::before {
+                                    background-image: url(/assets/images/business/icon_npl_role_2.png)
+                                }
+                            }
+
+                            dd {
+                                border-radius: 80px 80px 80px 10px;
+                                &:nth-of-type(1) {
+                                    background-color: #FF911A;
+                                }
+
+                                &:nth-of-type(2) {
+                                    background-color: #50555A;
+                                }
+                            }
+                        }
+                    }
+
+                    dt {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 240px;
+                        margin-bottom: 40px;
+                        box-shadow: rgba(#000, .16) 0 10px 20px;
+                        background-color: #FFFFFF;
+                        color: #5E5B6E;
+                        font-weight: $font-weight-extrabold;
+                        font-size: 20px;
+                        line-height: math.div(32, 20);
+                        text-align: center;
+
+                        &::before {
+                            display: block;
+                            width: 110px;
+                            height: 110px;
+                            margin: 20px 0 5px;
+                            background: {
+                                repeat: no-repeat;
+                                position: center center;
+                                size: auto 110px;
+                            };
+                            content: "";
+                        }
+                    }
+
+                    dd {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 80px;
+                        color: #FFFFFF;
+                        font-weight: $font-weight-extrabold;
+                        font-size: 16px;
+                        line-height: math.div(24, 16);
+
+                        & + dd {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-top: 100px;
+
+                    dl {
+                        width: 588px;
+                        padding: 30px 0 30px 30px;
+                        border: 1px solid #5E6368;
+                        border-radius: 10px 50px 50px 50px;
+
+                        &:nth-of-type(3),
+                        &:nth-of-type(4) {
+                            margin-top: 24px;
+                        }
+                    }
+
+                    dt {
+                        margin-bottom: 20px;
+                        font-weight: $font-weight-bold;
+                        font-size: 20px;
+                        line-height: math.div(30, 20);
+                    }
+
+                    dd {
+                        position: relative;
+                        padding-left: 10px;
+                        color: #666;
+                        font-size: 14px;
+                        line-height: math.div(20, 14);
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            top: 8px;
+                            left: 0;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #959595;
+                            content: "";
+                        }
+
+                        & + dd {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.business-pf {
+    &__tab-content-inner {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    section {
+        header {
+            text-align: center;
+
+            h4 {
+                padding-bottom: 20px;
+                font-size: 24px;
+                font-weight: $font-weight-extrabold;
+            }
+        }
+    }
+
+    #tab-panel-contents-1 {
+        header + div {
+            position: relative;
+            height: 729px;
+            background-image: url(/assets/images/business/img_pf_con1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 729px;
+
+            h5 {
+                position: absolute;
+                top: 425px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 28px;
+                font-weight: $font-weight-extrabold;
+                line-height: math.div(40, 28);
+                text-align: center;
+            }
+
+            .business-pf__item {
+                position: absolute;
+                background-color: #fff;
+                border-radius: 50%;
+
+                &_1 {
+                    top: 150px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    p {
+                        background: url(/assets/images/business/icon_pf_con1_1.png) no-repeat center 30px;
+                        color: #5E5B6E;
+                    }
+
+                    dl {
+                        right: -370px;
+                        bottom: 63px;
+                    }
+
+                    dt {
+                        color: #5E5B6E;
+                        &::before {
+                            background: #5E5B6E;
+                        }
+                    }
+                }
+
+                &_2 {
+                    bottom: 33px;
+                    left: 275px;
+
+                    p {
+                        background: url(/assets/images/business/icon_pf_con1_2.png) no-repeat center 30px;
+                        color: #23A6F8;
+                    }
+
+                    dl {
+                        left: -276px;
+                        bottom: 68px
+                    }
+
+                    dt {
+                        color: #23A6F8;
+                        &::before {
+                            background: #23A6F8;
+                        }
+                    }
+                }
+
+                &_3 {
+                    right: 275px;
+                    bottom: 33px;
+
+                    p {
+                        background: url(/assets/images/business/icon_pf_con1_3.png) no-repeat center 30px;
+                        color: #FF901A;
+                    }
+
+                    dl {
+                        right: -290px;
+                        bottom: 68px
+                    }
+
+                    dt {
+                        color: #FF901A;
+                        &::before {
+                            background: #FF901A;
+                        }
+                    }
+                }
+
+                p {
+                    display: flex;
+                    justify-content: center;
+                    width: 240px;
+                    height: 240px;
+                    padding-top: 140px;
+                    border-radius: 130px;
+                    box-sizing: border-box;
+                    box-shadow: rgba(#000, .16) 0 10px 20px;
+                    background-size: 110px auto;
+                    font-size: 20px;
+                    font-weight: $font-weight-extrabold;
+                    line-height: math.div(28, 20);
+                    text-align: center;
+                }
+
+                dl {
+                    position: absolute;
+                }
+
+                dt {
+                    position: relative;
+                    padding-top: 20px;
+                    font-size: 20px;
+                    font-weight: $font-weight-extrabold;
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 203px;
+                        height: 2px;
+                        content:'';
+                    }
+                }
+
+                dd {
+                    position: relative;
+                    padding-left: 10px;
+                    font-size: 14px;
+                    color: #666;
+
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 7px;
+                        left: 0;
+                        width: 4px;
+                        height: 4px;
+                        background-color: #959595;
+                        border-radius: 2px;
+                        content:'';
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+    #tab-panel-contents-2 {
+        header + div {
+            height: 650px;
+            margin-top: 60px;
+            background: url(/assets/images/business/img_pf_con2.jpg) no-repeat center;
+        }
+    }
+
+    #tab-panel-contents-3 {
+        section {
+
+            &:nth-of-type(1) {
+                margin: 60px 0 120px 0;
+                background: url(/assets/images/business/img_pf_con3.jpg) no-repeat center;
+                height: 438px;
+            }
+
+            &:nth-of-type(2) {
+                position: relative;
+                height: 504px;
+
+                div {
+                    position: absolute;
+                    border-radius: 6px;
+
+                    @for $i from 1 through 5 {
+                        &:nth-child(#{$i}) {
+                            background: url(/assets/images/business/img_pf_con3_#{$i}.jpg) no-repeat center/cover;
+                        }
+                    }
+
+                    &.item1 {
+                        top: 0;
+                        left: 0;
+                        width: 384px;
+                        height: 240px;
+                    }
+
+                    &.item2 {
+                        top: 0;
+                        left: 407px;
+                        width: 486px;
+                        height: 240px;
+                    }
+
+                    &.item3 {
+                        top: 0;
+                        right: 0;
+                        width: 282px;
+                        height: 504px;
+                    }
+
+                    &.item4 {
+                        bottom: 0;
+                        left: 0;
+                        width: 486px;
+                        height: 240px;
+                    }
+
+                    &.item5 {
+                        bottom: 0;
+                        left: 510px;
+                        width: 384px;
+                        height: 240px;
+                    }
+                }
+                
+                dl {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    padding: 30px 30px 10px 30px;
+                    background-color: #fff;
+                }
+
+                dt {
+                    color: #000;
+                    font-size: 24px;
+                    font-weight: $font-weight-extrabold;
+                }
+
+                dd {
+                    color: #000;
+                    line-height: math.div(24, 16);
+                }
+            }
+        }
+    }
+
+    #tab-panel-contents-4.business__tab-content {
+        margin: 0;
+    }
+
+    #tab-panel-contents-4 {
+        section {
+            margin-top: 66px;
+            padding: 164px 0 200px 0;
+            background-color: #F6F6F6;
+        }
+
+        dl {
+            div {
+                height: 322px;
+
+                &:nth-of-type(1) {
+                    padding: 106px 0 104px 714px;
+                    background: url(/assets/images/business/img_pf_con4_1.png) no-repeat left top;
+                }
+
+                &:nth-of-type(2) {
+                    padding: 106px 714px 104px 0;
+                    background: url(/assets/images/business/img_pf_con4_2.png) no-repeat right top;
+                    text-align: right;
+                }
+
+                &:nth-of-type(3) {
+                    padding: 106px 0 104px 714px;
+                    background: url(/assets/images/business/img_pf_con4_3.png) no-repeat left top;
+                }
+            }
+
+            dt {
+                padding-bottom: 20px;
+                color: #1E1D24;
+                font-size: 32px;
+                font-weight: $font-weight-extrabold;
+            }
+
+            dd {
+                color: #1E1D24;
+                line-height: math.div(24, 16);
+            }
+        }
+
+    }
+
+}

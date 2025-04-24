@@ -1,0 +1,74 @@
+@use "sass:math";
+
+.error {
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 180px 0 200px 0;
+        text-align: center;
+    }
+
+    h2 {
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 160px;
+        color: #24A6F8;
+        font-size: 100px;
+        font-weight: $font-weight-extrabold;
+        line-height: 1;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 198px;
+            height: 210px;
+            content: url(/assets/images/common/img_error.png);
+        }
+    }
+
+    p {
+        margin-bottom: 80px;
+        color: #666;
+        font-weight: $font-weight-bold;
+
+        strong {
+            display: block;
+            padding-bottom: 24px;
+            color: #000;
+            font-size: 28px;
+            font-weight: $font-weight-extrabold;
+        }
+    }
+
+    p + div {
+        display: flex;
+        justify-content: center;
+        grid-gap: 10px;
+    }
+
+    a {
+        display: block;
+        width: 172px;
+        padding: 18px 0;
+        border-radius: 6px 29px 29px 29px;
+        color: #fff;
+        font-size: 20px;
+        transition: .2s;
+
+        &:hover {
+            border-radius: 0;
+        }
+
+        &:first-of-type {
+            background-color: #FC1937;
+        }
+
+        &:last-of-type {
+            background-color: #1E1D24;
+        }
+    }
+
+
+}

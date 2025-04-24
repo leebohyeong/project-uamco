@@ -1,0 +1,74 @@
+@use "sass:math";
+
+.error {
+    &__inner {
+        padding: 200px 20px;
+        text-align: center;
+    }
+
+    h2 {
+        position: relative;
+        margin-bottom: 17px;
+        padding-bottom: 120px;
+        color: #24A6F8;
+        font-size: 70px;
+        font-weight: $font-weight-extrabold;
+        line-height: 1;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 149px;
+            height: 158px;
+            background: {
+                image: url(/assets/images/common/img_error.png);
+                repeat: no-repeat;
+                position: center bottom;
+                size: 149px auto;
+            };
+            content: "";
+        }
+    }
+
+    p {
+        margin-bottom: 40px;
+        color: #666;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+
+        strong {
+            display: block;
+            padding-bottom: 20px;
+            color: #000;
+            font-size: 20px;
+            font-weight: $font-weight-extrabold;
+        }
+    }
+
+    p + div {
+        display: flex;
+        justify-content: center;
+        grid-gap: 10px;
+    }
+
+    a {
+        display: block;
+        width: 112px;
+        padding: 9px 0;
+        border-radius: 6px 29px 29px 29px;
+        color: #fff;
+        font-size: 14px;
+
+        &:first-of-type {
+            background-color: #FC1937;
+        }
+
+        &:last-of-type {
+            background-color: #1E1D24;
+        }
+    }
+
+
+}

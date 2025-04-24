@@ -1,0 +1,38 @@
+@each $weight, $name in
+        (300, 'NanumSquareNeo-Light'),
+        (400, 'NanumSquareNeo-Regular'),
+        (700, 'NanumSquareNeo-Bold'),
+        (800, 'NanumSquareNeo-ExtraBold'),
+        (900, 'NanumSquareNeo-Heavy') {
+    @font-face {
+        font-family: "NanumSquareNeo";
+        font-style: normal;
+        font-weight: $weight;
+        font-display: swap;
+        src:url("/assets/fonts/#{$name}.woff2") format('woff2');
+        text-rendering: optimizeLegibility;
+    }
+}
+
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-heavy: 900;
+
+$font-family: "NanumSquareNeo", Arial, sans-serif;
+
+
+
+body {
+    font-size: 16px;
+    font-family: inspect($font-family);
+    line-height: 1.5;
+}
+
+input,
+select,
+textarea {
+    font-family: inspect($font-family);
+}

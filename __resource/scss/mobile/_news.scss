@@ -1,0 +1,108 @@
+@use "sass:math";
+
+.dropdown {
+    width: 100px;
+    height: 40px;
+
+    &__button {
+        width: 100%;
+    }
+
+    &__title,
+    &__name {
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+    }
+
+    &__name {
+        padding: 7px 0 7px 20px;
+        text-align: left;
+    }
+
+    &__control {
+        height: 40px;
+        padding-left: 14px;
+
+        &::before {
+            top: calc(50% - 2.5px);
+            right: 12px;
+            border-right: 5px solid rgba(0, 0, 0, 0);
+            border-bottom: 6px solid;
+            border-left: 5px solid rgba(0, 0, 0, 0);
+        }
+    }
+
+    &__container {
+        height: 40px;
+        padding-top: 40px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+    &__list {
+        padding-bottom: 0;
+    }
+}
+
+.news-list-common {
+    padding: 0 20px 150px;
+
+    & > header {
+        padding: 60px 0 20px 0;
+
+        h3 {
+            position: relative;
+            margin-bottom: 50px;
+            font-size: 20px;
+            font-weight: $font-weight-extrabold;
+            line-height: math.div(36, 20);
+            text-align: center;
+        }
+
+        fieldset {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 10px;
+            max-width: 1070px;
+            margin: 0 auto;
+        }
+
+        .search {
+            position: relative;
+            width: calc(100% - 100px);
+            height: 40px;
+            padding-left: 14px;
+            border: 1px solid #ccc;
+            border-radius: 40px;
+
+            input {
+                width: calc(100% - 46px);
+                height: 100%;
+                border: 0;
+                box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                outline: 0;
+
+                &::placeholder {
+                    color: #999;
+                    font-size: 12px;
+                }
+            }
+
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 46px;
+                height: 40px;
+                background: url(/assets/images/common/icon_search.png) no-repeat center/ 18px auto;
+            }
+        }
+    }
+}
+
+
+

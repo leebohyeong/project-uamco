@@ -1,0 +1,101 @@
+/*! scaffolding */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+button,
+dl,
+dt,
+dd,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+table,
+td,
+th {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+address {
+    font-style: normal;
+}
+
+[role=button],
+button {
+    display: block;
+    cursor: pointer;
+    color: #000;
+    border: 0;
+    background: transparent;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    border: 0;
+    background: transparent;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+select {
+    border: 0;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none
+    }
+}
+
+em {
+    font-style: normal;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
