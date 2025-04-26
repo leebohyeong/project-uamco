@@ -14,4 +14,3 @@
 - 📂 __resource/ — 개발 소스 (js, scss)
 - 📂 src/main/resource/static/assets — 빌드 결과물 (배포용)
 - 📂 src/main/resource/static/m/ - mobile
-- 📄 index.html — 메인 HTML 파일
